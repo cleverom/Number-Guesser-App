@@ -13,11 +13,11 @@ const message = document.querySelector(".message");
 minNum.textContent = min;
 maxNum.textContent = max;
 
-game.addEventListener("mousedown", function(e){
-    if(e.target.className === "play-again"){
-        window.location.reload();
-    }
-})
+game.addEventListener("mousedown", function (e) {
+  if (e.target.className === "play-again") {
+    window.location.reload();
+  }
+});
 
 guessBtn.addEventListener("click", function () {
   let guess = parseInt(guessInput.value);
@@ -57,7 +57,7 @@ function gameOver(won, msg) {
 }
 
 function getRandomNum(min, max) {
-    return Math.floor(Math.random()*(max-min+1)+min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function setMessage(msg, color) {
